@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- importa o bootstrap para estilização da página -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- importa o arquivo de estilos do projeto -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Carrinho de compras</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- topo da página contendo a logo e acesso à página principal -->
+        <div class="topo">
+            <a href="pagina_principal.html">
+                <h1 id="logotipo">PetShop AmigoFiel</h1>
+            </a>
+        </div>
+
+        <br><br><br>
+
+    </header>
+
+    <div>
+
+        <!-- seção principal que exibe os produtos adicionados ao carrinho -->
+        <section id="carrinho">
+
+            <h2 class="intro">Meu Carrinho</h2>
+
+            <!-- tabela contendo os produtos selecionados pelo usuário -->
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Cama Pet Nuvem</td>
+                        <td>2</td>
+                        <td>R$ 69,90</td>
+                        <td>R$ 139,80</td>
+                    </tr>
+
+                    <tr>
+                        <td>Coleira Peitoral</td>
+                        <td>1</td>
+                        <td>R$ 121,90</td>
+                        <td>R$ 121,90</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!-- área que apresenta o valor total e as ações do carrinho -->
+            <div class="resumo">
+
+                <h3>Total: R$ 261,70</h3>
+
+                <!-- botão para remover todos os itens do carrinho -->
+                <button class="btn btn-danger">
+                    Limpar Carrinho
+                </button>
+
+                <!-- botão para finalizar a compra -->
+                <button class="btn btn-success">
+                    Finalizar Compra
+                </button>
+
+            </div>
+
+            <br>
+
+            <!-- botão para retornar à página principal -->
+            <a href="pagina_principal.html">
+                <button class="btn btn-secondary">voltar</button>
+            </a>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

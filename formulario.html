@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- define codificação de caracteres e responsividade da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>formulario</title>
+
+    <!-- importa o arquivo de estilos do projeto -->
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- topo da página contendo a logo e acesso à página principal -->
+        <div class="topo">
+            <a href="pagina_principal.html">
+                <h1 id="logotipo">PetShop AmigoFiel</h1>
+            </a>
+        </div>
+
+        <br><br><br>
+
+    </header>
+
+    <main>
+
+        <div>
+
+            <!-- formulário de cadastro do cliente e do pet -->
+            <h1 class="intro">Formulário de cadastro</h1>
+
+            <form>
+
+                <!-- seção com os dados pessoais do cliente -->
+                <fieldset>
+
+                    <legend>dados pessoais</legend>
+
+                    Nome:
+                    <input type="text" placeholder="Nome completo" required>
+
+                    <br><br>
+
+                    CPF:
+                    <input type="text" placeholder="Digite o CPF" minlength="11" maxlength="11" oninput="this.value=this.value.replace(/[^0-9,.]/g,'')" required>
+
+                    Data de Nascimento:
+                    <input type="date" required>
+
+                    <!-- seleção de sexo do cliente -->
+                    <label>
+                        <input type="radio" name="sexo" value="Masculino" required>
+                        Masculino
+                    </label>
+
+                    <label>
+                        <input type="radio" name="sexo" value="feminino">
+                        Feminino
+                    </label>
+
+                    <br><br>
+
+                    Estado Civil:
+
+                    <select name="escivil" required>
+                        <option value="">Selecione</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="uniao_estavel">União Estável</option>
+                        <option value="separado">Separado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+                    </select>
+
+                    Renda mensal (opcional):
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9,.]/g,'')" placeholder="Ex: 1990,90">
+
+                </fieldset>
+
+                <br>
+
+                <!-- seção com os dados de endereço do cliente -->
+                <fieldset>
+
+                    <legend>Endereço</legend>
+
+                    Logradouro:
+                    <input type="text" placeholder="Nome da rua" required>
+
+                    Número:
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="Numero" required>
+
+                    Complemento:
+                    <input type="text" placeholder="Apto, Bloco, Prédio" required>
+
+                    <br><br>
+
+                    <!-- seleção do estado de residência -->
+                    Estado:
+
+                    <select name="Estado" id="Estado" required>
+                        <option value="">selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+
+                    Cidade:
+                    <input type="text" placeholder="Informe a cidade" required>
+
+                </fieldset>
+
+                <br>
+
+                <!-- seção com as informações do pet -->
+                <fieldset>
+
+                    <legend>Dados do Pet</legend>
+
+                    Nome do pet:
+                    <input type="text" placeholder="Nome do pet" required>
+
+                    Raça:
+                    <input type="text" placeholder="Informe a raça" required>
+
+                    Data de nascimento:
+                    <input type="date" required>
+
+                    <!-- seleção de sexo do pet -->
+                    Sexo:
+
+                    <select name="sexopet" required>
+                        <option value="macho">Macho</option>
+                        <option value="femea">Fêmea</option>
+                    </select>
+
+                </fieldset>
+
+                <!-- botão para envio dos dados preenchidos no formulário -->
+                envio dos dados cadastrais
+                <input type="submit" value="enviar">
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

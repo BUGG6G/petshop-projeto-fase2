@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Online - Home</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="logica.js"></script>
+</head>
+
+<body>
+
+    
+<!--topo da pagina, onde se encontra a logo e o carrinho-->
+<div class="topo">
+    <a href="pagina_principal.html">
+    <h1 id = "logotipo"> PetShop AmigoFiel</h1>
+    </a>
+<!--ícone que dá acesso à página de agendamentos-->
+    <div class="carrinho">
+        <a href="agenda.html">
+            <img src="imagens/agenda.png" alt="icone de agenda">    
+        </a>
+
+<!--carrinho de compras fake-->
+        <a href="carrinho.html">
+            <img src="imagens/carrinho-de-compras (1).png" alt="icone de Carrinho">
+            <span id="contador">0</span>
+        </a>
+    </div>
+</div><br>
+    <!--carrosel de imagens do site criado com boostrap-->
+    <br>
+    <header>
+        <div id="carouselExample" class="carousel slide">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="imagens/banner1.png" alt="bem-vindo a pet-shop Amigo Fiel" class="d-block w-100">
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="imagens/banner2.png" alt="agende o banho e tosa aqui" class="d-block w-100" data-bs-toggle="modal" data-bs-target="#agendamentoModal">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="imagens/banner3.png" alt="promoção pague 4 sachês de ração e leve 5" class="d-block w-100">
+                </div>
+            </div>
+
+            <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+            <!--atalhos para os principais funçoes do site (produtos, serviços e contato)-->
+        <div id = "atalhos">
+            <h3>Tudo o que seu melhor amigo precisa em um só lugar!</h3>
+
+            <nav>
+                <a href="formulario.html"><button class="btn btn-secondary">Formulario</button></a>
+                <a href="#catalogo"><button class="btn btn-secondary">Produtos</button></a>
+                <a href="#servicos"><button class="btn btn-secondary">serviços</button></a>
+                <a href="#contato"><button class="btn btn-secondary">contato</button></a>
+            </nav>
+        </div>
+    </header>
+
+    <hr>
+    <!-- seção principal contendo o catálogo de produtos -->
+    <main>
+        <div class = "intro">
+            <h2> Nosso Catálogo de Produtos</h2>
+            <p>Confira os produtos disponíveis!!!</p>
+        </div>
+
+        <!--catalogo de produtos-->
+        
+        <div id="catalogo">
+            <section>
+                <h1 id="titulos">Acessórios</h1>
+                <div class="produtos">
+                
+                    <article class="artigo">
+                        <img src="imagens/camanuvempet.webp" alt="Cama Nuvem para Pets" class="tamanho">
+                        <h5>Cama Pet Nuvem</h5>
+                        <p>Cama nuvem ultra macia com enchimento de fibra siliconada</p>
+                        <h5>R$ 69,9</h5>
+                        <input type="number" id="qtdcama" value="1" min="1" class="quantidade"> <button class="btn btn-success" onclick="adicionarCarrinho('qtdcama')">adicionar ao carrinho</button><br>
+                        <p></p>
+                        <button class="btn btn-info info">ver detalhes</button>
+                        <p></p>
+                    </article>
+
+                    <article class="artigo">
+                        <img src="imagens/coleira peitoral.jpg" alt="Coleira Peitoral Vermelha" class="tamanho">
+                        <h5>Coleira Peitoral Ergonômica</h5>
+                        <p>Peitoral ajustável com guias de nylon reforçado</p>
+                        <h5>R$ 121,9</h5>
+                        <input type="number" id="qtdcoleira" value="1" min="1" class="quantidade"> <button class="btn btn-success" onclick="adicionarCarrinho('qtdcoleira')">adicionar ao carrinho</button><br>
+                        <p></p>
+                        <button class="btn btn-info info">ver detalhes</button>
+                        <p></p>
+                    </article>
+                </div>
+            </section>
+            <hr>
+            <section>
+            <h3 id="titulos">Rações e Petiscos</h3>
+                <div class="produtos">
+                
+                    <article class="artigo">
+                        <img src="imagens/petisco.jpg" alt="Petisco Biscoito Canino" class="tamanho">
+                        <h5>Biscoito pedigree sabor leite para Cães (1kg)</h5>
+                        <p>Petiscos crocantes e saudáveis feitos com cereais integrais.</p>
+                        <h5>R$ 24,9</h5>
+                        <input type="number" id="qtdpetisco" value="1" min="1" class="quantidade"> <button class="btn btn-success" onclick="adicionarCarrinho('qtdpetisco')">adicionar ao carrinho</button><br>
+                        <p></p>
+                        <button class="btn btn-info info">ver detalhes</button>
+                        <p></p>
+                    </article>
+
+                    <article class="artigo">
+                        <img src="imagens/ração.webp" alt="ração golden porte médio" class="tamanho">
+                        <h5>Ração Golden para medio porte (1kg)</h5>
+                        <p>Ração saudável feito com cereais integrais.</p>
+                        <h5>R$ 29,9</h5>
+                        <input type="number" id="qtdpetisco" value="1" min="1" class="quantidade"> <button class="btn btn-success" onclick="adicionarCarrinho('qtdpetisco')">adicionar ao carrinho</button><br>
+                        <p></p>
+                        <button class="btn btn-info info">ver detalhes</button>
+                        <p></p>
+                    </article>
+
+                    
+
+                    <article class="artigo">
+                        <img src="imagens/raçãogolden.webp" alt="Saco de Ração Premium" class="tamanho">
+                        <h5>Ração Golden Premium Cães Adultos (1kg)</h5>
+                        <p>Alimento completo para cães adultos de médio e grande porte.</p>
+                        <h5>R$ 29,9</h5>
+                        <input type="number" id="qtdracao" value="1" min="1" class="quantidade"> <button class="btn btn-success" onclick="adicionarCarrinho('qtdracao')">adicionar ao carrinho</button><br>
+                        <p></p>
+                        <button class="btn btn-info info">ver detalhes</button>
+                        <p></p>
+                    </article>
+                </div>
+            </section>
+            <hr>
+
+                <h3 id="titulos">Higiene e Limpeza</h3>
+                
+                <div class="produtos">
+                
+                    <article class="artigo">
+                        <img src="imagens/tapete higienico.png" alt="Tapete Higiênico para Cães" class="tamanho">
+                        <h5>Tapete Higiênico Go! Pads (30 Unidades)</h5>
+                        <p>Tapetes com alta capacidade de absorção e gel atrativo canino.</p>
+                        <h5>R$ 38,9</h5>
+                        <input type="number" id="qtdtapete" value="1" min="1" class="quantidade"> <button class="btn btn-success" onclick="adicionarCarrinho('qtdtapete')">adicionar ao carrinho</button><br>
+                        <p></p>
+                        <button class="btn btn-info info">ver detalhes</button>
+                        <p></p>
+                    </article>
+
+                    <article class="artigo">
+                        <img src="imagens/shampoo neutro.webp" alt="Shampoo Neutro para Pets" class="tamanho">
+                        <h5>Shampoo Petclean Neutro (500ml)</h5>
+                        <p>Fórmula suave com extrato de amêndoas.</p>
+                        <h5>R$ 32,0</h5>
+                        <input type="number" id="qtdshampoo" value="1" min="1" class="quantidade"> <button class="btn btn-success" onclick="adicionarCarrinho('qtdshampoo')">adicionar ao carrinho</button><br>
+                        <p></p>
+                        <button class="btn btn-info info">ver detalhes</button>
+                        <p></p>
+                    </article>
+                </div>
+            <hr>
+            <!-- seção de serviços de banho e tosa -->
+            <section id="servicos">
+            <h2 id = "titulos"> Banho e Tosa</h2>
+            <p>Oferecemos o melhor cuidado estético para o seu pet com profissionais qualificados:</p>
+            
+            <img src="imagens/b&Tsimples.png" alt="banho e tosa simples " class="banhoetosa anima" data-bs-toggle="modal" data-bs-target="#agendamentoModal">
+            <img src="imagens/b&Tcompleta.png" alt="banho e tosa completa" class="banhoetosa anima" data-bs-toggle="modal" data-bs-target="#agendamentoModal">
+            <img src="imagens/b&T compl+tele.png" alt="banho e tosa completa+busca" class="banhoetosa anima" data-bs-toggle="modal" data-bs-target="#agendamentoModal">
+
+            <button class="btn btn-info" id="agendamento" data-bs-toggle="modal" data-bs-target="#agendamentoModal">AGENDE AQUI!!!</button>
+            <p></p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Serviços</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Banho e Tosa Simples</strong></td>
+                        <td>O tutor traz o pet até a nossa loja física. Inclui banho com água morna, secagem, corte de unhas e tosa higiênica.</td>
+                        <td>R$ 80,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Banho e Tosa simples + Tele-busca</strong></td>
+                        <td><strong>Buscamos e entregamos o seu pet em casa!</strong> Inclui o serviço de Banho e Tosa simples + taxa de transporte</td>
+                        <td>R$ 90,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Banho e Tosa Completa</strong></td>
+                        <td>O tutor traz o pet. Inclui banho premium, hidratação da pelagem, tosa geral na máquina ou tesoura e limpeza de ouvidos.</td>
+                        <td>R$ 110,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Banho e Tosa com Tele-busca</strong></td>
+                        <td><strong>Buscamos e entregamos o seu pet em casa!</strong> Inclui o serviço de Banho e Tosa completa + taxa de transporte</td>
+                        <td>R$ 115,00</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </section>
+        </div>
+
+    </main>
+    <hr>
+    <!-- rodapé contendo informações de contato da empresa -->
+    <footer id="contato">
+        <p>Telefone/WhatsApp: (51) 99999-9999 | E-mail: contato@petshopamigofiel.com</p>
+        <p>Endereço: Rua dos Pets, nº 123 - Bairro Centro</p>
+        <br>
+        <p><small>&copy; 2026 PetShop Amigo Fiel. Desenvolvido por Taigor Oliveira Melo para o Projeto de F.S.W.</small></p>
+    </footer>
+
+    <!-- balão de agendamento, abre quando clica em uma das opções de banho e tosa-->
+    <div class="modal fade" id="agendamentoModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                <h5 class="modal-title">Agendamento</h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+                </div>
+
+                <div class="modal-body">
+
+                <label>Serviço:</label>
+
+                <select class="form-select">
+                    <option>Banho & Tosa Simples</option>
+                    <option>Banho & Tosa Completa</option>
+                </select>
+
+                <br>
+
+                <label>Método:</label>
+
+                <select class="form-select">
+                    <option>Tele-busca</option>
+                    <option>Entrega no local</option>
+                </select>
+
+                <br>
+
+                <!-- formulário para realização de agendamentos -->
+
+                <form id="formAgendamento" onsubmit="return validarHorario()">
+                <label>Data:</label>
+                <input type="date" class="form-control" id="dataAgendamento" required>
+
+                <br>
+
+                <label>Horário:</label>
+                <input type="time" class="form-control" id="horarioAgendamento" required>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">
+                        Confirmar
+                    </button>
+                </div>
+                </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

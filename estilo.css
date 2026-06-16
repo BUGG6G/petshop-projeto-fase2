@@ -1,0 +1,198 @@
+/* define tamanho e estiliza o carrosel dos banners iniciais */
+.carousel img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* define a cor de fundo da página */
+body{
+    background-color: rgb(245, 248, 252);
+}
+
+/* estiliza o logotipo principal */
+h1#logotipo{
+    text-align: center;
+    color: #0aa6bb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* centraliza e estiliza a área de atalhos */
+div#atalhos{
+    text-align: center;
+    color: #0aa6bb;
+}
+
+/* estiliza o texto de introdução */
+.intro{
+    text-align: center;
+    color: #0aa6bb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* estiliza o catálogo principal */
+#catalogo{
+    text-align: center;
+    background-color: white;
+    width: 82%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+/* estiliza os títulos das seções */
+#titulos{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0aa6bb;
+}
+
+/* organiza os produtos lado a lado */
+.produtos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* estiliza os cards dos produtos */
+.artigo{
+    width: 300px;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* define o tamanho dos campos numéricos */
+.quantidade{
+    width: 50px;
+    height: 35px;
+}
+
+/* ajusta a largura do botão de detalhes */
+.info{
+    width: 90%;
+    color: #f2f2f2;
+}
+
+/* centraliza a seção de contato */
+#contato{
+    text-align: center;
+}
+
+/* define o tamanho padrão das imagens dos produtos */
+.tamanho{
+    width: 250px;
+    height: 200px;
+}
+
+/* define o tamanho e estiliza os serviços */
+.banhoetosa{
+    width: 400px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* coloca uma pequena animação nos serviços */
+.anima:hover{
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+/* centraliza e define a largura da tabela */
+table{
+    margin: auto;
+    width: 95%;
+}
+
+/* estiliza o cabeçalho da tabela */
+th {
+    background-color: #0aa6bb;
+    color: white;
+}
+
+/* colore as linhas pares da tabela */
+tr:nth-child(even) {
+    background-color: white;
+}
+
+/* colore as linhas ímpares da tabela */
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* fixa o cabeçalho no topo da página e organiza logo, agenda e carrinho */
+.topo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+    height: 50px;
+
+    background-color: white;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    z-index: 1000;
+    width: 100%;
+}
+
+/* estiliza a página do carrinho de compras */
+#carrinho{
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* posiciona o resumo da compra abaixo da lista de produtos */
+.resumo{
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* cria uma referência para posicionar o contador sobre o ícone */
+.carrinho{
+    position: relative;
+    display: inline-block;
+}
+
+/* define o tamanho do ícone do carrinho */
+.carrinho img{
+    width: 40px;
+}
+
+/* estiliza o contador de itens do carrinho */
+#contador{
+    position: absolute;
+
+    top: -8px;
+    right: -8px;
+
+    background-color: red;
+    color: white;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+/* estiliza o botão de agendamento */
+#agendamento{
+    width: 90%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* tirar a barra de link criado pelo <a> */
+a{
+    text-decoration: none;
+}
